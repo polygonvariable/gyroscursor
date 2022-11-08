@@ -9,7 +9,7 @@ const io = require('socket.io')(http);
 app.use('/shared', express.static(path.join(__dirname, './../../shared')));
 
 app.get("/remote", function(req, res) {
-    res.sendFile(path.join(__dirname, './../../shared'));
+    res.sendFile(path.join(__dirname, './../../shared/index.html'));
 });
 
 //

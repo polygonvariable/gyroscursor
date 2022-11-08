@@ -79,7 +79,7 @@
         az.innerText = "z: " + z;
 
         let data = { x: y, y: x };
-        socket.emit('CursorUpdate', data);
+        socket.emit("onPositionUpdate", data);
     };
 
 </script>

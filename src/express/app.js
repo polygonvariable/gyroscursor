@@ -8,12 +8,18 @@ const io = require('socket.io')(http);
 //
 app.use('/shared', express.static(path.join(__dirname, './../shared')));
 
+app.get("/remote", function(req, res) {
+    res.sendFile("./../shared/index.html")
+});
+
 //
 io.on('connection', function(socket) {
-    console.log('Remote connected');
 
-    socket.on('CursorUpdate', function(data) {
-        
+    //console.log('Remote connected');
+
+    socket.on("CursorUpdate", function(data) {
+
+        socket.emit("hello", "world");
         let _mouse_location = getCursorPosition();
         _mouse_location.x += data.x;
         _mouse_location.y += data.y;

@@ -1,4 +1,4 @@
-const socket  = require("socket.io-client").io("https://gyroscursor.onrender.com/");
+const socket  = require("socket.io-client").io("https://gyroscursor");
 
 //const socket = io("https://gyroscursor.onrender.com/socket.io/")
 

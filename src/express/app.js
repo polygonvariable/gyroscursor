@@ -19,7 +19,6 @@ io.on('connection', function(socket) {
 
     socket.on("CursorUpdate", function(data) {
 
-        socket.emit("hello", "world");
         let _mouse_location = getCursorPosition();
         _mouse_location.x += data.x;
         _mouse_location.y += data.y;

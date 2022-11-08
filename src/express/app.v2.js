@@ -13,17 +13,17 @@ io.on("connection", function(socket) {
     console.log("Remote connected");
 
     socket.on("onPositionUpdate", function(data) {
-        socket.emit("emitPositionUpdate", data);
+        io.emit("emitPositionUpdate", data);
     });
     socket.on("onRightClick", function() {
-        socket.emit("emitRightClick");
+        io.emit("emitRightClick");
     });
     socket.on("onDoubleClick", function() {
-        socket.emit("emitDoubleClick");
+        io.emit("emitDoubleClick");
     });
 
     socket.on("disconnect", function() {
-       console.log("Remote disconnected");
+       io.log("Remote disconnected");
     });
 
 });

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node src/console/app.console.js"
+    "start": "node src/express/app.v2.js"
   },
   "author": "",
   "license": "ISC",

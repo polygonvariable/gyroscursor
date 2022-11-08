@@ -2,7 +2,6 @@
   "name": "gyrocontrol",
   "version": "1.0.0",
   "description": "",
-  "main": "src/express/app.v2.js",
   "scripts": {
     "start": "node src/express/app.v2.js"
   },
